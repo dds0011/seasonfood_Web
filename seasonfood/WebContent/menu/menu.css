@@ -1,0 +1,95 @@
+
+
+.img ul {
+	list-style: none;
+}
+
+.menubar{
+/*float: center;*/
+border:none;
+border:0px;
+padding:10px 0;
+font-size:18px;
+margin: 10px auto;
+}
+
+.menubar .mainMenu{
+list-style:none;
+margin:0;
+padding:0;
+text-align: center;
+}
+
+.menubar .mainMenu li{
+display: inline-block;
+text-align: center;
+width: 200px;
+}
+
+.menubar .mainMenu li a{
+color:black;
+display:inline-block;
+width: 200px;
+line-height:50px;
+margin:0px;
+box-sizing: border-box;
+padding:0px 25px;
+text-align:center;
+text-decoration:none;
+}
+
+.menubar .mainMenu li a:hover, .menubar .mainMenu li:hover a{
+background: rgb(71,71,71);
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menubar .mainMenu .subMenu {
+background: rgb(109, 109, 109);
+display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+padding:0px;
+margin:0px;
+border:0px;
+position:absolute;
+width: inherit;
+z-index:200;
+/*top:1em;
+/*left:0;*/
+}
+
+.menubar li:hover>.subMenu{
+display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+}
+
+.menubar .mainMenu .subMenu li {
+background: rgb(109, 109, 109);
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:200px;
+}
+
+.menubar li:hover li a{
+background:none;
+}
+
+.menubar .mainMenu li .subMenu a{
+display:inline-block;
+height:50px;
+width: inherit;
+font-size:16px;
+font-style:normal;
+margin:0px;
+padding:0px 10px 0px 15px;
+text-align:center;
+
+
+}
+
+.menubar .mainMenu li .subMenu a:hover, .menubar .mainMenu li .subMenu li:hover a{
+background: rgb(109, 109, 109);
+border:0px;
+
+text-decoration:none;
+}

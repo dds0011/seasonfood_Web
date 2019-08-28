@@ -1,0 +1,15 @@
+		html,body {
+			margin: 0;
+			padding: 0;
+		}
+		footer {
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 96px;
+			background-color: #E5E5E5;
+		}
+		footer p{font-size:14px;color:black; text-align: center; float: center; text-decoration:none}
+		section div{text-decoration:none}
+	 aside {width: 100%; height: 1942.853px;}
+}

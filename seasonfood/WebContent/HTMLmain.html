@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>씨푸씨푸</title>
+  <link rel="stylesheet" type="text/css" href=".\css\menu.css">
+  <link rel="stylesheet" type="text/css" href=".\css\footerstyle.css">
+  <link rel="stylesheet" type="text/css" href=".\css\headercss.css">
+  <link rel="stylesheet" type="text/css" href=".\css\footerstyle.css">
+  <link rel="stylesheet" type="text/css" href=".\css\section.css">
+  <link rel="stylesheet" type="text/css" href=".\css\aside.css">
+
+  <style>
+  
+    footer {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 96px;
+      background-color: #E5E5E5;
+    }
+    footer p{font-size:14px;color:black; text-align: center; float: center; text-decoration:none}
+  </style>
+    <style type="text/css">
+            .banner {position: relative; width: 1920px; height: 480px; top: 50px;  margin:0 auto; padding:0; overflow: hidden;}
+  .banner ul {position: absolute; margin: 0px; padding:0; list-style: none; }
+  .banner ul li {float: left; width: 1920px; height: 480px; margin:0; padding:0;}
+
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script language="JavaScript">
+
+  $(document).ready(function() {
+    var $banner = $(".banner").find("ul");
+
+    var $bannerWidth = $banner.children().outerWidth();//이미지의 폭
+    var $bannerHeight = $banner.children().outerHeight(); // 높이
+    var $length = $banner.children().length;//이미지의 갯수
+    var rollingId;
+
+    //정해진 초마다 함수 실행
+    rollingId = setInterval(function() { rollingStart(); }, 4500);//다음 이미지로 롤링 애니메이션 할 시간차
+    
+    function rollingStart() {
+      $banner.css("width", $bannerWidth * $length + "px");
+      $banner.css("height", $bannerHeight + "px");
+      //alert(bannerHeight);
+      //배너의 좌측 위치를 옮겨 준다.
+      $banner.animate({left: - $bannerWidth + "px"}, 1500, function() { //숫자는 롤링 진행되는 시간이다.
+        //첫번째 이미지를 마지막 끝에 복사(이동이 아니라 복사)해서 추가한다.
+        $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+        //뒤로 복사된 첫번재 이미지는 필요 없으니 삭제한다.
+        $(this).find("li:first").remove();
+        //다음 움직임을 위해서 배너 좌측의 위치값을 초기화 한다.
+        $(this).css("left", 0);
+        //이 과정을 반복하면서 계속 롤링하는 배너를 만들 수 있다.
+      });
+    }
+  }); 
+//-->  
+</script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div style="padding-right: 100px;">
+      <ul>
+        <a href=".\login\login.html"><li>로그인</a>
+        <li>|
+        <a href=".\login\register.html"><li>회원가입</a>
+        <li>|
+        <a href="#"><li>장바구니</a>
+        <li>|
+        <a href="#"><li>주문조회</a>
+      </ul>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="img" style="padding-top: 40px;">
+      <center><a href=".\HTMLmain.html"><img src=".\image\Logo.png" width="210" height="70"></a></center>
+      
+    </div>
+    <div class="menubar">
+      <div style="">
+        <ul class="mainMenu">
+          <li><a href="#" id="current">메뉴</a>
+            <ul class="subMenu">
+              <li><a href=".\menu\spring.html">봄</a></li>
+              <li><a href=".\menu\summer.html">여름</a></li>
+              <li><a href=".\menu\fall.html">가을</a></li>
+             <li><a href=".\menu\winter.html">겨울</a></li>
+            </ul>
+         <li><a href="#" id="current">판매점 찾기</a>
+           <ul class="subMenu">
+               <li><a href=".\find\meat.html">육류</a></li>
+              <li><a href=".\find\fish.html">어류</a></li>
+              <li><a href=".\find\ve.html">채소</a></li>
+             <li><a href=".\find\fruit.html">과일</a></li>
+            </ul>
+         <li><a href=".\brand\brand.">브랜드 소개</a></li>
+         <li><a href=".\seasonfood\season.html">제철음식</a></li>
+       </ul>
+      </div>
+    </div>
+  </nav>
+
+
+    <div class="banner">
+      <ul>
+        <li><img src=".\image\main_banner_1.jpg" width="100%"></li>
+        <li><img src=".\image\main2.jpg" width="100%" ></li>
+       <li><img src=".\image\main3.jpg" width="100%" ></li>
+       
+      </ul>
+    </div>
+
+<br><br>
+<aside class="aside">
+  <div class="divListGroup">
+    <div class="divChild">  
+      <a href=".\menu\spring.html"><img src=".\image\main_spring-01.jpg" width="298.56 px" height="295.68 px" border="0" /> </a>
+    </div>
+    <div class="divChild">  
+      <a href=".\menu\summer.html"><img src=".\image\main_summer-01.jpg" width="298.56 px" height="295.68 px" border="0" /> </a>
+    </div>
+    <div class="divChild">
+      <a href=".\menu\fall.html"><img src=".\image\main_autumn-01.jpg" width="298.56 px" height="295.68 px" border="0" /> </a>
+    </div>
+    <div class="divChild">  
+      <a href=".\menu\winter.html"><img src=".\image\main_winter-01.jpg" width="298.56 px" height="295.68 px" border="0" /> </a>
+    </div>
+  </div>
+</aside>
+
+  <footer>
+  <br>
+  <p>회사소개&nbsp;&nbsp;|&nbsp;&nbsp;제휴/제안&nbsp;&nbsp;|&nbsp;&nbsp;고객의 소리&nbsp;&nbsp;|&nbsp;&nbsp;이용약관&nbsp;&nbsp;|&nbsp;&nbsp;<span style="color: #E5BE20">개인정보처리방침</span>&nbsp;&nbsp;|&nbsp;&nbsp;이메일무단수집거부
+    <br>
+  <small>Copyright 2018. seapoo All rihgts reserved.</small>
+  </p>
+    
+</footer>
+
+</body>
+</html>

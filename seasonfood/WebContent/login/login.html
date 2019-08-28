@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///C:/Users/user/Desktop/HTML/subHTML.html -->
+<html>
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>씨푸씨푸- Log-in</title>
+
+  <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
+
+    <link rel="stylesheet" href=".\css\style.css" media="screen" type="text/css" />
+     <link rel="stylesheet" type="text/css" href=".\css\menu.css">
+  <link rel="stylesheet" type="text/css" href=".\css\footerstyle.css">
+  <link rel="stylesheet" type="text/css" href=".\css\headercss.css">
+  <link rel="stylesheet" type="text/css" href=".\css\season.css">
+
+</head>
+
+<body>
+  <header class="header">
+    <div style="padding-right: 100px;">
+      <ul>
+        <a href="..\login\login.html"><li>로그인</a>
+        <li>|
+        <a href="..\login\register.html"><li>회원가입</a>
+        <li>|
+        <a href="#"><li>장바구니</a>
+        <li>|
+        <a href="#"><li>주문조회</a>
+      </ul>
+    </div>
+  </header>
+
+
+<nav class="nav">
+    <div class="img" onfocus=this.blur() style="float: center; position: absolute;">
+        <ul>
+        <li><a href="..\HTMLmain.html">
+        	<img src="..\image\Logo.png" width="123" height="36"></a>
+        </li><br><br>
+        </ul>
+   </div>
+    <div class="menubar" style="float: center; padding-left: 700px;">
+     
+      <div>
+        <ul>
+          <li><a href="#" id="current">메뉴</a>
+           <ul>
+               <li><a href="..\menu\spring.html">봄</a></li>
+              <li><a href="..\menu\summer.html">여름</a></li>
+              <li><a href="..\menu\fall.html">가을</a></li>
+             <li><a href="..\menu\winter.html">겨울</a></li>
+            </ul>
+ <li><a href="#" id="current">판매점 찾기</a>
+           <ul>
+               <li><a href="..\find\meat.html">육류</a></li>
+              <li><a href="..\find\fish.html">어류</a></li>
+              <li><a href="..\find\ve.html">채소</a></li>
+             <li><a href="..\find\fruit.html">과일</a></li>
+            </ul>
+         <li><a href="..\brand\brand.html">브랜드 소개</a></li>
+         <li><a href="..\seasonfood\season.html">제철음식</a></li>
+       </ul>
+      </div>
+    </div>
+  </nav>
+
+<br><br><br><br>
+<section class="section">
+    <div class="login-card">
+    <h1>로그인</h1><br>
+  <form method= "POST" action="login_member.jsp">
+    <input type="text" name="User_id" placeholder="아이디">
+    <input type="password" name="User_passwd" placeholder="비밀번호">
+    <input type="submit" name="login" class="login login-submit" value="로그인">
+  </form>
+
+  <div class="login-help">
+    <a href="#">회원가입</a> • <a href="#">아이디/비밀번호 찾기</a>
+  </div>
+</div>
+</section>
+
+<br><br><br>
+
+<footer>
+  <br>
+  <p>회사소개&nbsp;&nbsp;|&nbsp;&nbsp;제휴/제안&nbsp;&nbsp;|&nbsp;&nbsp;고객의 소리&nbsp;&nbsp;|&nbsp;&nbsp;이용약관&nbsp;&nbsp;|&nbsp;&nbsp;<span style="color: #E5BE20">개인정보처리방침</span>&nbsp;&nbsp;|&nbsp;&nbsp;이메일무단수집거부
+    <br>
+  <small>Copyright 2018. seapoo All rihgts reserved.</small>
+  </p>
+    
+</footer>
+</body></html>
